@@ -1,9 +1,7 @@
 FROM ubuntu:20.04
 
-RUN apt update && apt upgrade && \
-	apt install -y software-properties-common && \
-	DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y tzdata && \
-    apt install -y wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev &&\
-	add-apt-repository ppa:deadsnakes/ppa &&\
-	apt install -y python3.11
-	
+ADD Python-3.11.5.tgz .
+RUN tar xzf Python-3.11.5.tgz && \
+	cd Python-3.11.3 && \
+	./configure --enable-optimizations && \
+	make altinstall 
