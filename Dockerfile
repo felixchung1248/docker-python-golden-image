@@ -1,8 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
-ADD Python-3.11.5.tgz .
-RUN apt update && \
-	apt install -y build-essential && \
-	cd Python-3.11.5 && \
-	./configure --enable-optimizations && \
-	make altinstall 
+RUN apt update && apt upgrade && \
+	apt install -y software-properties-common && \
+	DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y tzdata && \
+    apt install -y wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev &&\
+	add-apt-repository ppa:deadsnakes/ppa &&\
+	apt install -y python3.11
+	
