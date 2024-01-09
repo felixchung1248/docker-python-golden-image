@@ -1,23 +1,15 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
+
+ADD terraform_1.6.6_linux_386.zip /usr/local/bin
 
 RUN apt update -y && apt upgrade -y \
-	&& apt-get update \
-	&& apt install -y gnupg software-properties-common \
+	&& apt install -y software-properties-common \
 	&& DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y tzdata \
     && apt install -y sudo curl wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev \
 	&& add-apt-repository ppa:deadsnakes/ppa \
 	&& apt install -y python3.11 \
 	&& apt install -y python3-pip \
-	&& pip install mo-sql-parsing requests flask \
-	&& wget -O- https://apt.releases.hashicorp.com/gpg | \
-		gpg --dearmor | \
-		sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg \
-	&& echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-	https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-	sudo tee /etc/apt/sources.list.d/hashicorp.list \
-	&& sudo apt update \
-	&& sudo apt-get install -y terraform
-	
+	&& pip install mo-sql-parsing requests flask
 
 
 	
