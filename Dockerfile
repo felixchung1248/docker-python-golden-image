@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 # Set the environment variable
-ENV PATH="${PATH}:/usr/local/go/bin"
+ENV PATH="${PATH}:/usr/local/go/bin:/root/go/bin"
 
 ADD go1.21.5.linux-amd64.tar.gz /usr/local
 ADD terraform.zip .
