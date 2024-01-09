@@ -4,7 +4,7 @@ FROM ubuntu:24.04
 ENV PATH="${PATH}:/usr/local/go/bin"
 
 ADD go1.21.5.linux-amd64.tar.gz /usr/local
-ADD terraform.zip
+ADD terraform.zip .
 
 RUN apt update -y && apt upgrade -y \
 	&& apt install -y software-properties-common \
