@@ -10,7 +10,6 @@ RUN apt update -y && apt upgrade -y \
 	&& apt install -y python3.11 \
 	&& apt install -y python3-pip \
 	&& pip install mo-sql-parsing requests flask --break-system-packages \
-	&& unzip /usr/local/bin/terraform_1.6.6_linux_386.zip
 
 
 	
