@@ -8,7 +8,7 @@ RUN apt update -y && apt upgrade -y \
 	&& add-apt-repository ppa:deadsnakes/ppa \
 	&& apt install -y python3.11 \
 	&& apt install -y python3-pip \
-	&& pip install mo-sql-parsing requests flask --break-system-packages \
+	&& pip install mo-sql-parsing requests flask \
 	&& wget -O- https://apt.releases.hashicorp.com/gpg | \
 		gpg --dearmor | \
 		sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg \
