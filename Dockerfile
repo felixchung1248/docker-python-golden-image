@@ -13,7 +13,7 @@ RUN apt update -y && apt upgrade -y \
 ##	&& add-apt-repository ppa:deadsnakes/ppa \
 	&& apt install -y python3.11 \
 	&& apt install -y python3-pip \	
-	&& pip install mo-sql-parsing requests flask pyodbc --break-system-packages \
+	&& pip install mo-sql-parsing requests flask psycopg2 --break-system-packages \
 	&& unzip terraform.zip \
 	&& cd terraform && go install
 
