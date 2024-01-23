@@ -16,7 +16,7 @@ RUN apt update -y && apt upgrade -y \
 	&& apt install -y libpq-dev python3-dev \
 	&& pip install mo-sql-parsing requests flask psycopg2  --break-system-packages \
 	&& pip install --upgrade pip --break-system-packages \
-	&& python3 -m pip install --upgrade setuptools \
+	&& python3 -m pip install --upgrade setuptools --break-system-packages \
 	&& pip install openmetadata-ingestion~=0.13.0 --break-system-packages \
 	&& unzip terraform.zip \
 	&& cd terraform && go install
