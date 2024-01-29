@@ -6,5 +6,6 @@ acryl-datahub[datahub-rest]
 langchain 
 langchain-community 
 langchain-experimental
+langchain-openai
 pyspark
 pyarrow
