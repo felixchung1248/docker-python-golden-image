@@ -19,9 +19,9 @@ RUN apt update -y && apt upgrade -y \
 	&& pip install -r requirements.txt --break-system-packages \
 	&& unzip terraform.zip \
 	&& cd terraform && go install \
-	&& wget https://dlcdn.apache.org/spark/spark-3.4.0/spark-3.4.0-bin-hadoop3.tgz \
-	&& tar xvf spark-3.4.0-bin-hadoop3.tgz \
-	&& mv spark-3.4.0-bin-hadoop3 /opt/spark
+	&& wget https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz \
+	&& tar xvf spark-3.5.0-bin-hadoop3.tgz \
+	&& mv spark-3.5.0-bin-hadoop3 /opt/spark
 
 
 	
