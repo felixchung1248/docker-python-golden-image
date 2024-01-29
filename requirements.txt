@@ -9,3 +9,4 @@ langchain-experimental
 langchain-openai
 pyspark
 pyarrow
+pandas
