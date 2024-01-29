@@ -1,0 +1,9 @@
+mo-sql-parsing 
+requests 
+flask 
+psycopg2 
+'acryl-datahub[datahub-rest]' 
+langchain 
+langchain-community 
+langchain-experimental
+pyspark
