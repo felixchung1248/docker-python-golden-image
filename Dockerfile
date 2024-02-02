@@ -21,7 +21,9 @@ RUN apt update -y && apt upgrade -y \
 	&& cd terraform && go install \
 	&& wget https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz \
 	&& tar xvf spark-3.5.0-bin-hadoop3.tgz \
-	&& mv spark-3.5.0-bin-hadoop3 /opt/spark
+	&& mv spark-3.5.0-bin-hadoop3 /opt/spark \
+	&& apt install -y nodejs \
+	&& apt install -y npm
 
 
 	
