@@ -18,12 +18,7 @@ RUN apt update -y && apt upgrade -y \
 	&& apt install -y libpq-dev python3-dev \
 	&& pip install -r requirements.txt --break-system-packages \
 	&& unzip terraform.zip \
-	&& cd terraform && go install \
-	&& wget https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz \
-	&& tar xvf spark-3.5.0-bin-hadoop3.tgz \
-	&& mv spark-3.5.0-bin-hadoop3 /opt/spark \
-	&& apt install -y nodejs \
-	&& apt install -y npm
+	&& cd terraform && go install
 
 
 	
