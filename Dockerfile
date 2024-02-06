@@ -16,9 +16,7 @@ RUN apt update -y && apt upgrade -y \
 	&& apt install -y python3.11 \
 	&& apt install -y python3-pip \	
 	&& apt install -y libpq-dev python3-dev \
-	&& pip install -r requirements.txt --break-system-packages \
-	&& unzip terraform.zip \
-	&& cd terraform && go install
+	&& pip install -r requirements.txt --break-system-packages
 
 
 	
