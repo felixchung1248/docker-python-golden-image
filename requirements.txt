@@ -10,3 +10,4 @@ langchain-openai
 pyspark
 pyarrow
 pandas
+bs4
