@@ -22,6 +22,8 @@ RUN apt update -y && apt upgrade -y \
 	&& wget https://dlcdn.apache.org/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz \
 	&& tar xvf spark-3.5.1-bin-hadoop3.tgz \
 	&& mv spark-3.5.1-bin-hadoop3 /opt/spark \
+	&& echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
+	&& apt update -y \
 	&& apt install -y nodejs \
 	&& apt install -y npm
 
