@@ -13,3 +13,4 @@ pandas
 bs4
 sqlalchemy<2.0
 denodo-sqlalchemy
+redis
