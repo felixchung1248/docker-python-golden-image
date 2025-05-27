@@ -11,6 +11,8 @@ ADD requirements.txt .
 RUN apt update -y && apt upgrade -y \
 	&& apt install -y software-properties-common \
 	&& DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y tzdata \
+	&& curl -fsSL https://ollama.com/install.sh | sh \
+	&& ollama pull llama3.2
     && apt install -y unzip sudo curl wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev \
 	&& apt install -y default-jdk \
 	&& apt install -y python3.12 \
