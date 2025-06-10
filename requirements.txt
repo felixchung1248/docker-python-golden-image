@@ -3,16 +3,7 @@ requests
 flask 
 psycopg2 
 acryl-datahub[datahub-rest]
-langchain 
-langchain-community 
-langchain-experimental
-langchain-openai
-langchain-ollama
-ollama
-pyspark
 pyarrow
 pandas
 bs4
-sqlalchemy<2.0
-denodo-sqlalchemy
-redis
+pydantic_ai
