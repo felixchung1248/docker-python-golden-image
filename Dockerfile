@@ -21,6 +21,8 @@ RUN apt update -y && apt upgrade -y \
 	&& cd terraform && go install \
 	&& apt update -y \
 	&& apt install -y nodejs
+	
+ENV PATH="/root/.local/bin/:$PATH"
 
 
 	
