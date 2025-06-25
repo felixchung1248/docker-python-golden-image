@@ -16,6 +16,7 @@ RUN apt update -y && apt upgrade -y \
 	&& apt install -y python3.12 \
 	&& apt install -y python3-pip \	
 	&& apt install -y libpq-dev python3-dev \
+	&& apt install -y jq \
 	&& pip install -r requirements.txt --ignore-installed --break-system-packages \
 	&& unzip terraform.zip \
 	&& cd terraform && go install \
